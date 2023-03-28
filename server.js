@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 // Importing the Routes
-const noteRoutes = require('./routes/routes');
+const noteRoutes = require('./routes/noteRoutes');
 
 // URL of the database hosted on MongoDB Atlas
 const dbURL =
@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public")); // Setting the Static Folder
 app.use(express.urlencoded({ extended: true })); // For Parsing URLs
 
-// Routes
+// Notes Routes
 app.use(noteRoutes);
 
 // Error Page
