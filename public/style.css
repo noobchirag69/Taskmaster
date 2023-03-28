@@ -53,6 +53,44 @@ header {
   text-decoration: underline;
 }
 
+#toggler {
+  color: #fff;
+  cursor: pointer;
+  font-style: italic;
+  display: none;
+}
+
+#toggler .fa-bars {
+  font-style: italic;
+}
+
+.mobile-navbar {
+  background-color: #1D3684;
+  padding: 20px 20px 10px 20px;
+  display: none;
+  position: absolute;
+  top: 7%;
+  right: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 3px 10px rgba(100, 100, 100, 0.7);
+  transform: 2s;
+}
+
+.mobile-navbar ul {
+  list-style: none;
+}
+
+.mobile-navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-navbar a:hover {
+  text-decoration: underline;
+}
+
 .container {
   max-width: 1200px;
   margin: 50px auto;
@@ -275,7 +313,19 @@ footer {
 
 /* Media Query */
 @media only screen and (max-width: 600px) {
+  body {
+    margin-top: 40px;
+  }
+
   .notes-container {
     grid-template-columns: 1fr;
+  }
+
+  .nav-option {
+    display: none;
+  }
+
+  #toggler {
+    display: block;
   }
 }

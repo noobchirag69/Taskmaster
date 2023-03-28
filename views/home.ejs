@@ -5,35 +5,40 @@
 
     <body>
         <%- include('./partials/header.ejs') %>
-            <main>
-                <div class="container">
-                    <div class="container-navbar">
-                        <div class="container-logo">
-                            <h2>Notes</h2>
+            <%- include('./partials/mobile-header.ejs') %>
+                <main>
+                    <div class="container">
+                        <div class="container-navbar">
+                            <div class="container-logo">
+                                <h2>Notes</h2>
+                            </div>
+                            <div class="container-button">
+                                <a title="Add" href="/add">Add +</a>
+                            </div>
                         </div>
-                        <div class="container-button">
-                            <a title="Add" href="/add">Add +</a>
-                        </div>
+                        <% if (notes.length> 0) { %>
+                            <div class="notes-container">
+                                <% notes.forEach (note=> { %>
+                                    <a href="/details/<%= note.id %>">
+                                        <div class="note">
+                                            <h2>
+                                                <%= note.title %>
+                                            </h2>
+                                            <p>
+                                                <%= note.body %>
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <% }); %>
+                            </div>
+                            <% } else { %>
+                                <div class="zero-container">
+                                    <h2>No notes to show!</h2>
+                                </div>
+                                <% } %>
                     </div>
-                    <% if (notes.length > 0) { %>
-                        <div class="notes-container">
-                            <% notes.forEach (note => { %>
-                                <a href="/details/<%= note.id %>">
-                                    <div class="note">
-                                        <h2><%= note.title %></h2>
-                                        <p><%= note.body %></p>
-                                    </div>
-                                </a>
-                            <% }); %>
-                        </div>
-                    <% } else { %>
-                        <div class="zero-container">
-                            <h2>No notes to show!</h2>
-                        </div>
-                    <% } %>
-                </div>
-            </main>
-        <%- include('./partials/footer.ejs') %>
+                </main>
+                <%- include('./partials/footer.ejs') %>
     </body>
 
 </html>

@@ -3,19 +3,20 @@
 
 <%- include('./partials/head.ejs') %>
 
-<body>
-    <%- include('./partials/header.ejs') %>
-    <main>
-        <div class="container form-container">
-            <form action="/edit/<%= note.id %>" method="POST">
-                <h1>Edit note!</h1>
-                <input type="text" name="title" value="<%= note.title %>" placeholder="Note Title" required>
-                <textarea name="body" placeholder="Input your note..." required><%= note.body %></textarea>
-                <input type="submit" value="Update">
-            </form>
-        </div>
-    </main>
-    <%- include('./partials/footer.ejs') %>
-</body>
+    <body>
+        <%- include('./partials/header.ejs') %>
+            <%- include('./partials/mobile-header.ejs') %>
+                <main>
+                    <div class="container form-container">
+                        <form action="/edit/<%= note.id %>" method="POST">
+                            <h1>Edit note!</h1>
+                            <input type="text" name="title" value="<%= note.title %>" placeholder="Note Title" required>
+                            <textarea name="body" placeholder="Input your note..." required><%= note.body %></textarea>
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+                </main>
+                <%- include('./partials/footer.ejs') %>
+    </body>
 
 </html>

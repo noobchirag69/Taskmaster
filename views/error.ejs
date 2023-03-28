@@ -3,14 +3,15 @@
 
 <%- include('./partials/head.ejs') %>
 
-<body>
-    <%- include('./partials/header.ejs') %>
-    <main>
-        <div class="container about-container">
-            <p>Sorry, page not found :/</p>
-        </div>
-    </main>
-    <%- include('./partials/footer.ejs') %>
-</body>
+    <body>
+        <%- include('./partials/header.ejs') %>
+            <%- include('./partials/mobile-header.ejs') %>
+                <main>
+                    <div class="container about-container">
+                        <p>Sorry, page not found :/</p>
+                    </div>
+                </main>
+            <%- include('./partials/footer.ejs') %>
+    </body>
 
 </html>
