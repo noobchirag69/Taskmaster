@@ -62,19 +62,20 @@ header {
 
 .mobile-navbar {
   background-color: #1D3684;
-  padding: 20px;
+  padding: 10px 20px;
   display: none;
-  position: absolute;
-  top: 52px;
-  right: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  margin-top: -30px;
+  margin-bottom: -40px;
   box-shadow: 0 3px 10px rgba(100, 100, 100, 0.7);
   transform: 2s;
 }
 
 .mobile-navbar ul {
   list-style: none;
+}
+
+.mobile-navbar li {
+  line-height: 30px;
 }
 
 .mobile-navbar a {
@@ -128,6 +129,10 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
+}
+
+.actions span {
+  border-right: 1px dashed #fff;
 }
 
 #edit {
@@ -247,7 +252,7 @@ header {
 .form-container form input[type="email"] {
   padding: 10px;
   margin-bottom: 10px;
-  border: 2px solid rgb(61, 151, 206);
+  border: 2px solid #fff;
   outline: none;
   font-size: 16px;
   border-radius: 5px;
@@ -264,7 +269,7 @@ header {
   padding: 10px;
   resize: none;
   font-size: 16px;
-  border: 2px solid rgb(61, 151, 206);
+  border: 2px solid #fff;
   outline: none;
   margin-bottom: 10px;
   border-radius: 5px;
