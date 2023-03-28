@@ -92,7 +92,7 @@ app.get("/edit/:id", (req, res) => {
 app.post("/edit/:id", (req, res) => {
   const id = req.params.id;
   Note.findByIdAndUpdate(id, req.body)
-    .then((result) => res.redirect("/details/" + id))
+    .then((result) => res.redirect(`/details/${id}`))
     .catch((err) => res.status(404).render("error", { title: "Error" }));
 });
 
