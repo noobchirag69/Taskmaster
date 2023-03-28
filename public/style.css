@@ -62,7 +62,7 @@ header {
 
 .mobile-navbar {
   background-color: #1D3684;
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
   display: none;
   position: absolute;
   top: 52px;
@@ -309,10 +309,6 @@ footer {
 
 /* Media Query */
 @media only screen and (max-width: 600px) {
-  body {
-    margin-top: 40px;
-  }
-
   .notes-container {
     grid-template-columns: 1fr;
   }
