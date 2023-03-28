@@ -60,10 +60,6 @@ header {
   display: none;
 }
 
-#toggler .fa-bars {
-  font-style: italic;
-}
-
 .mobile-navbar {
   background-color: #1D3684;
   padding: 20px 20px 10px 20px;
